@@ -84,3 +84,6 @@ dmypy.json
 
 # Playwright
 playwright-report/
+
+#CSV o json
+.json

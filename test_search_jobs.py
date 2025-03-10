@@ -51,7 +51,7 @@ def run(playwright: Playwright):
     # Segundo bucle: procesar los enlaces de los jobs
     a = True
     max_tabs = len(job_items_date)  # Límite de pestañas a abrir
-    max_tabs_alternative = 2
+    max_tabs_alternative = 15
     tab_count = 0  # Contador de pestañas abiertas
 
     while a and tab_count < max_tabs_alternative:
@@ -120,7 +120,7 @@ def run(playwright: Playwright):
                 # Filtrar solo los trabajos con categoría "Junior", menos de 50 postulantes, año 2025 y ubicación "Santiago"
                 if (
                     "Junior" in qualifity_job_text
-                    and quantity_applicants_text <= 100
+                    and quantity_applicants_text <= 30
                     and year == 2025
                     and location_text == "Santiago"
                 ):
